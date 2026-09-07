@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1c1f24">
-<title>논PG, 이미 쓰고 계셔도 — 수수료는 더 내려갑니다 · 더베스트페이 결제 제안</title>
-<meta name="description" content="학부모 결제 경험은 그대로. 결제 뒤단(레일)만 바꿔 실효 수수료를 더 낮춥니다. 더베스트페이 논PG 결제 제안 — 1개 원 PoC로 절감을 먼저 증명합니다.">
+<title>논PG, 이미 쓰고 계셔도 — 수수료를 더 낮출 여지, PoC로 검증 · 더베스트페이 결제 제안</title>
+<meta name="description" content="학부모 결제 경험은 그대로. 결제 뒤단(레일)만 바꿔 실효 수수료를 더 낮출 여지가 있는지 무부담 PoC로 먼저 검증합니다. 더베스트페이 논PG 결제 제안.">
 <!--
   ══════════════════════════════════════════════════════════════════════════
   제안서 표준 (가로 A4 · 웹+PDF 겸용 · 인포그래픽 우선) — SSOT=발표덱_스타일_가이드.md §0.9
@@ -101,7 +101,7 @@ b .red,.red{color:var(--red)}
   border-radius:11px;padding:22px 32px;text-align:center;font-size:26px;font-weight:750;line-height:1.45;color:var(--ink)}
 .paybar b{color:var(--red2)}
 .paybar.neu{background:var(--soft2);border-left-color:var(--muted)}.paybar.neu b{color:var(--ink)}
-.paybar.tight{margin-top:20px;padding:16px 28px;font-size:22px}
+.paybar.tight{margin-top:12px;padding:12px 26px;font-size:20px}
 .darkbar{max-width:1080px;margin:34px auto 0;background:var(--dark);color:#fff;border-radius:14px;
   padding:26px 34px;text-align:center;font-size:27px;font-weight:800;line-height:1.4}
 .darkbar b{color:#ff8080}.darkbar em{font-style:normal;color:#7ee2a4}
@@ -125,22 +125,24 @@ b .red,.red{color:var(--red)}
 .defcol p b{color:var(--ink)}.defcol.acc p b{color:var(--red2)}
 
 /* ═══ FUND-FLOW DIAGRAM (slide 5) — 유지 ═══ */
-.diag{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin:20px auto 0;max-width:1120px;width:100%}
-.fpanel{border:1px solid var(--line);border-radius:16px;padding:16px 20px 18px;background:var(--soft);
+.diag{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin:12px auto 0;max-width:1120px;width:100%}
+.fpanel{border:1px solid var(--line);border-radius:16px;padding:12px 18px 14px;background:var(--soft);
   display:flex;flex-direction:column;align-items:center}
 .fpanel.acc{background:#fff;border:2px solid var(--redline)}
 .fpanel .ftitle{font-size:21px;font-weight:850;color:var(--ink);margin:0 0 3px;text-align:center}
 .fpanel.acc .ftitle{color:var(--red2)}
 .fpanel .fst{font-size:14px;color:var(--muted);font-weight:650;margin:0 0 12px;text-align:center;line-height:1.3}
-.fnode{width:100%;max-width:330px;border-radius:11px;padding:8px 14px;text-align:center;border:1px solid var(--line);background:#fff}
+.fnode{width:100%;max-width:330px;border-radius:11px;padding:6px 14px;text-align:center;border:1px solid var(--line);background:#fff}
 .fnode .fn{font-size:17.5px;font-weight:800;color:var(--ink);line-height:1.2}
 .fnode .fd{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:1px;line-height:1.25}
 .fnode.head{background:var(--dark);border-color:var(--dark)}.fnode.head .fn{color:#fff}.fnode.head .fd{color:#c0c5cd}
 .fnode.margin{background:var(--red-soft);border:2px solid var(--red)}.fnode.margin .fn{color:var(--red2)}.fnode.margin .fd{color:var(--red2);font-weight:750}
+.fnode.tbp{background:var(--red);border:2px solid var(--red2)}.fnode.tbp .fn{color:#fff}.fnode.tbp .fd{color:#ffe1e1;font-weight:750}
+.fnode.tbp .tbadge2{display:inline-block;font-size:11px;font-weight:900;color:var(--red2);background:#fff;border-radius:6px;padding:1px 8px;margin-bottom:3px;letter-spacing:0}
 .fnode.direct{background:var(--ok-soft);border:1.5px solid var(--okline)}.fnode.direct .fn{color:#177a4c}.fnode.direct .fd{color:#177a4c;font-weight:700}
-.farrow{width:20px;height:18px;margin:2px 0;color:#b9bec6;flex:none}
+.farrow{width:20px;height:14px;margin:1px 0;color:#b9bec6;flex:none}
 .fpanel.acc .farrow{color:#e79aa0}
-.fbadge{margin-top:12px;font-size:16px;font-weight:800;border-radius:10px;padding:10px 16px;text-align:center;line-height:1.3;width:100%;max-width:330px}
+.fbadge{margin-top:9px;font-size:16px;font-weight:800;border-radius:10px;padding:9px 16px;text-align:center;line-height:1.3;width:100%;max-width:330px}
 .fbadge.cut{background:#fff;color:var(--red2);border:1px dashed var(--red)}
 .fbadge.keep{background:var(--dark);color:#fff}.fbadge.keep em{font-style:normal;color:#7ee2a4}
 
@@ -461,10 +463,10 @@ b .red,.red{color:var(--red)}
   <span class="photo-cap">이미지: Unsplash License · 연출 스톡</span>
   <div class="cwrap">
     <span class="cov-tag">더베스트페이 × VAN 파트너 · 키즈노트 귀중</span>
-    <h1>논PG, <span class="red">이미 쓰고 계셔도</span> —<br>바꾸면 수수료는 <span class="red">더 내려갑니다.</span></h1>
+    <h1>논PG, <span class="red">이미 쓰고 계셔도</span> —<br>바꾸면 수수료를 <span class="red">한 번 더</span> 낮출 여지가 있습니다.</h1>
     <p class="cov-sub">학부모 결제 경험은 그대로. <b>결제 뒤단(레일)만</b> 바꿉니다.</p>
     <span class="cov-role">B2B 결제 원가 절감 제안 — 원 1곳 무부담 PoC 선(先)실증</span>
-    <p class="cov-meta">귀사 원비 결제는 이미 <b>올댓페이 기반 논PG</b>입니다. 현행을 부정하지 않고, <b>우대율은 그대로 두고 처리원가·정산에서</b> 총부담을 한 번 더 낮춥니다.<br>
+    <p class="cov-meta">귀사 원비 결제는 이미 <b>올댓페이 기반 논PG</b>입니다. 우대율(규제 하한)은 그대로 두고, 그 뒤단 <b>VAN 처리원가·정산 조건</b>은 사업자별로 다른 별개 레이어 — 더베스트페이의 <b>조정 여력</b>으로 더 낮출 여지가 있는지 <b>무부담 PoC로 먼저 검증</b>합니다.<br>
       제안: (주)더베스트페이 + 협업 VAN 파트너 · 2026.09</p>
   </div>
 </section>
@@ -473,16 +475,16 @@ b .red,.red{color:var(--red)}
 <section class="slide">
   <div class="hd"><span class="sec">한 장 요약</span><span class="pg"></span></div>
   <p class="kicker">귀사 원비는 이미 올댓페이 기반 논PG — 우리가 드리는 세 가지 약속</p>
-  <h2 class="headline">이미 논PG인 원비를, <span class="red">한 번 더</span> 낮춥니다</h2>
+  <h2 class="headline">이미 논PG인 원비, <span class="red">한 번 더 낮출 여지</span>를 검증합니다</h2>
   <div class="promise">
-    <div class="pcard hot"><div class="pn">1</div><h3>우대율은 그대로, 원가에서 절감</h3>
-      <p>우대율(규제 하한)은 <b>건드리지 않습니다.</b> 대신 <b>VAN 처리원가·부가가치</b>에서 총부담을 낮춥니다.</p></div>
+    <div class="pcard hot"><div class="pn">1</div><h3>우대율은 그대로, 원가 레이어를 조정</h3>
+      <p>우대율(규제 하한)은 <b>건드리지 않습니다.</b> 그 뒤단 <b>VAN 처리원가·정산은 사업자별로 다른 레이어</b> — 여기서 조정해 총부담을 낮출 여지를 봅니다.</p></div>
     <div class="pcard"><div class="pn">2</div><h3>UX·우대율 무변경 = 리스크 0</h3>
       <p>학부모 결제 화면도, 원이 받는 우대율도 <b>그대로.</b> 바뀌는 건 뒤단 레일뿐이라 <b>손해 볼 게 없습니다.</b></p></div>
-    <div class="pcard"><div class="pn">3</div><h3>무부담 PoC로 먼저 증명</h3>
-      <p>숫자를 단정하지 않습니다. <b>원 1곳 PoC에서 귀사 데이터로 절감을 먼저 확인</b>한 뒤 판단하십시오.</p></div>
+    <div class="pcard"><div class="pn">3</div><h3>무부담 PoC로 먼저 검증</h3>
+      <p>숫자를 단정하지 않습니다. <b>원 1곳 PoC에서 귀사 데이터로 절감 여지를 먼저 확인</b>한 뒤 판단하십시오.</p></div>
   </div>
-  <div class="darkbar">바꾸지 않는 것(<b>우대율·UX</b>)과 낮추는 것(<em>처리원가</em>)을 분명히 — 증명은 PoC로.</div>
+  <div class="darkbar">바꾸지 않는 것(<b>우대율·UX</b>)과 조정하는 것(<em>처리원가 레이어</em>)을 분명히 — 절감 여지는 PoC로 검증.</div>
   <p class="note">본 제안의 모든 수치는 <b>예시</b>이며 귀사 실측 데이터로 PoC에서 확정합니다. 규제·정산은 관련 법규 준수 하에 함께 검증합니다.</p>
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
@@ -530,10 +532,10 @@ b .red,.red{color:var(--red)}
   <div class="srcs">
     <span class="src"><b>[1]</b> 키즈노트 원비결제 신청 안내 · <a href="https://www.with-kidsnote.com/bill/apply" target="_blank" rel="noopener">with-kidsnote.com/bill/apply</a></span>
     <span class="src"><b>[2]</b> 올댓페이 연혁 · <a href="https://www.allthatpay.kr/html/greeting.html" target="_blank" rel="noopener">allthatpay.kr/html/greeting.html</a></span>
-    <span class="src"><b>[3]</b> 키즈노트 원비결제 안내 · <a href="https://www.kidsnote.com/jp/campaign/bill" target="_blank" rel="noopener">kidsnote.com/jp/campaign/bill</a></span>
+    <span class="src"><b>[3]</b> 키즈노트 원비결제 안내 · <a href="https://www.kidsnote.com/campaign/bill" target="_blank" rel="noopener">kidsnote.com/campaign/bill</a></span>
     <span class="src"><b>[4]</b> 키즈노트 개인정보 처리방침 개정 공지 · <a href="https://www.with-kidsnote.com/231f59e6-78b7-8056-8a76-c5e8dbb306ea" target="_blank" rel="noopener">with-kidsnote.com</a></span>
   </div>
-  <p class="note">가맹계약서·승인/정산 원장까지 확인한 것은 아니며, <b>공개된 공식 자료를 교차확인한 결과</b>입니다. 세부 구조·조건은 협의 및 실측으로 확정합니다.</p>
+  <p class="note">가맹계약서·승인/정산 원장까지 확인한 것은 아니며, <b>공개된 공식 자료를 교차확인한 결과</b>입니다. 세부 구조·조건은 협의 및 실측으로 확정합니다. <b>커머스=토스페이먼츠 매핑</b>은 개인정보 처리방침의 '파트너사 판매대금 정산' 문구에 근거한 <b>교차추론</b>이며, 서비스별 1:1 명문 근거는 아닙니다.</p>
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
 
@@ -547,16 +549,16 @@ b .red,.red{color:var(--red)}
       <span class="tbadge">트랙 A · 핵심 볼륨</span>
       <div class="tdomain">원비 결제 <span style="font-size:16px;font-weight:800;color:var(--red2)">(올댓페이 논PG)</span></div>
       <div class="tcur">전략 · <b>논PG 레일 교체</b></div>
-      <p class="tbody">이미 논PG이므로 <b>우대율(규제 하한)은 건드리지 않습니다.</b> 더베스트페이 논PG로 레일만 교체해 <b class="red">VAN 처리원가·매입/정산 조건</b>에서 한 번 더 낮춥니다.</p>
-      <div class="tmech">절감 지점 · <b>처리원가·정산에서 절감</b></div>
+      <p class="tbody">원이 내는 <b>우대 카드수수료는 그대로여도</b>, 그 뒤단 <b>VAN 승인·매입 처리원가·정산조건은 사업자별로 다른 별개 레이어</b>입니다. 더베스트페이의 낮은 VAN 원가기반을 <b class="red">조정·rev-share로 원에 되돌려</b> 한 번 더 낮출 여지를 <b>PoC로 검증</b>합니다.</p>
+      <div class="tmech">조정 지점 · <b>처리원가·정산 (rev-share 연계)</b></div>
       <div class="tvol">반복·대량 결제 = <b>사업의 핵심 볼륨</b></div>
     </div>
     <div class="tcard b">
       <span class="tbadge b">트랙 B · 추가 업사이드</span>
       <div class="tdomain">스토어 · 스마트주문 · 포토몰(개인) <span style="font-size:16px;font-weight:800;color:var(--muted)">(토스 PG)</span></div>
       <div class="tcur">전략 · <b>PG → 논PG 전환</b></div>
-      <p class="tbody">이 영역은 <b>PG를 경유</b>합니다. 즉 <b class="red">실제 PG 마진이 존재</b>합니다. 논PG로 전환하면 그 마진만큼 <b>정면 수수료 절감 여지</b>가 실재합니다.</p>
-      <div class="tmech b">절감 지점 · <b>PG 마진 자체를 절감</b></div>
+      <p class="tbody">이 영역은 <b>PG를 경유</b>하므로 <b class="red">PG 마진이 존재</b>합니다. 다만 <b>마켓플레이스(파트너사 판매대금 정산) 구조상 논PG 전환 가능성은 별도 검토</b>가 필요합니다 — 전환된다면 그 마진만큼 절감 여지.</p>
+      <div class="tmech b">절감 지점 · <b>PG 마진 (전환 가능성 별도 검토)</b></div>
       <div class="tvol">원비 대비 <b>작은 볼륨 · 추가 업사이드</b></div>
     </div>
   </div>
@@ -621,7 +623,7 @@ b .red,.red{color:var(--red)}
     <div class="fpanel">
       <span style="display:inline-block;font-size:14px;font-weight:850;color:#fff;background:#5a6069;border-radius:8px;padding:5px 14px;margin:0 0 8px">▶ 귀사 스토어·스마트주문·포토몰 (토스 PG)</span>
       <p class="ftitle">일반 PG 자금 흐름 <span style="font-size:14px;font-weight:800;color:var(--muted)">· 커머스 영역의 실제 구조</span></p>
-      <p class="fst">PG를 경유 — 카드 수수료 위에 <b>PG 마진</b>이 더해짐(= 논PG 전환 시 정면 절감 여지)</p>
+      <p class="fst">PG를 경유 — 카드 수수료 위에 <b>PG 마진</b>이 더해짐(전환 시 절감 여지 · 전환 가능성은 별도 검토)</p>
       <div class="fnode head"><div class="fn">학부모</div><div class="fd">앱에서 카드 결제</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="fnode"><div class="fn">결제 앱</div><div class="fd">PG 대표가맹점 경유</div></div>
@@ -631,27 +633,27 @@ b .red,.red{color:var(--red)}
       <div class="fnode"><div class="fn">카드사 승인 · 매입</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="fnode"><div class="fn">원(어린이집) 정산</div><div class="fd">PG 마진 차감 후 입금</div></div>
-      <div class="fbadge" style="background:var(--red-soft);color:var(--red2);border:1px dashed var(--red)">커머스엔 <b>PG 마진</b>이 존재 — 논PG 전환 시 정면 절감</div>
+      <div class="fbadge" style="background:var(--red-soft);color:var(--red2);border:1px dashed var(--red)">커머스엔 <b>PG 마진</b> 존재 — 전환 가능성은 별도 검토(전환 시 절감 여지)</div>
     </div>
     <!-- RIGHT: 논PG · 귀사 원비 현재 위치 -->
     <div class="fpanel acc">
       <span style="display:inline-block;font-size:14px;font-weight:850;color:#fff;background:#177a4c;border-radius:8px;padding:5px 14px;margin:0 0 8px">✓ 귀사 원비는 이미 여기(논PG·올댓페이)</span>
-      <p class="ftitle">논PG 자금 흐름 · 우리가 낮추는 지점</p>
-      <p class="fst">PG 미경유는 이미 하고 계십니다 — 우리는 그 안의 <b>처리원가·정산</b>만 최적화합니다</p>
+      <p class="ftitle">논PG 자금 흐름 · 더베스트페이가 조정하는 지점</p>
+      <p class="fst">PG 미경유는 이미 하고 계십니다 — 더베스트페이가 그 안에서 <b>처리원가·정산 조건을 조정</b>합니다</p>
       <div class="fnode head"><div class="fn">학부모</div><div class="fd">앱에서 카드 결제 · <b>경험 동일</b></div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="fnode"><div class="fn">결제 앱 · 각 원 직가맹</div><div class="fd">우대율(규제 하한) 그대로</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="fnode margin"><div class="fn">VAN 직승인·직매입</div><div class="fd">◀ 우리가 낮추는 지점 · 건당 처리원가</div></div>
+      <div class="fnode tbp"><span class="tbadge2">더베스트페이 · 조정 여력</span><div class="fn">처리·정산 조정 레이어</div><div class="fd">◀ 조정 지점 — 타사 논PG 대비 VAN 처리원가·정산을 더 유리하게</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="fnode"><div class="fn">카드사 승인</div></div>
+      <div class="fnode"><div class="fn">VAN 승인 · 매입</div><div class="fd">VAN이 승인·매입 처리</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="fnode margin"><div class="fn">카드사 → 원 직접 정산</div><div class="fd">◀ 우리가 개선 · 매입/정산 조건</div></div>
-      <div class="fbadge keep">우대율은 <em>그대로</em>, <b style="color:#ff8080">처리원가·정산</b>에서 절감</div>
+      <div class="fnode"><div class="fn">카드사 → 원 직접 정산</div><div class="fd">매입/정산 조건 (조정 대상)</div></div>
+      <div class="fbadge keep">우대율은 <em>그대로</em>, 더베스트페이의 <b style="color:#ff8080">조정 여력</b>으로 처리원가·정산을 더 낮출 여지</div>
     </div>
   </div>
-  <div class="paybar tight">원비(논PG)는 <b>우대율 그대로, 처리원가·정산에서</b> · 커머스(PG)는 <b>PG 마진 자체에서</b> 낮춥니다.</div>
-  <p class="note">개념 다이어그램(원리 재현)입니다. 실제 노드·조건은 카드사·VAN 규정에 따르며, 절감폭은 귀사 데이터로 PoC에서 확정합니다. 영역별 결제 방식 근거·출처는 '결제 구조 진단' 장을 참고하십시오.</p>
+  <div class="paybar tight">원비는 <b>우대율 그대로 · 더베스트페이 조정 여력</b>으로, 커머스는 <b>PG 마진</b>에서(전환 가능성 별도 검토) 낮출 여지를 봅니다.</div>
+  <p class="note">개념 다이어그램(원리 재현)입니다. 실제 노드·조건은 카드사·VAN 규정에 따르며, 절감폭은 PoC에서 확정합니다. 결제 방식 근거는 '결제 구조 진단' 장 참고.</p>
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
 
@@ -663,8 +665,8 @@ b .red,.red{color:var(--red)}
   <div class="diff">
     <div class="dcell"><div class="dnum">차별 ①</div><h3>더 낮은 VAN 건당 처리원가</h3>
       <p>협업 VAN 파트너의 <b>건당 처리 조건</b>으로 승인·매입 원가를 낮춥니다. (우대율은 그대로)</p></div>
-    <div class="dcell"><div class="dnum">차별 ②</div><h3>유리한 직매입·정산 조건</h3>
-      <p>PG 미경유 <b>직승인·직매입</b>과 정산 조건을 유리하게 설계해 중간 원가를 줄입니다.</p></div>
+    <div class="dcell"><div class="dnum">차별 ②</div><h3>유리한 매입·정산 조건</h3>
+      <p>PG 미경유 구조에서 <b>승인·매입·정산 조건</b>을 유리하게 <b>조정</b>해 중간 원가를 줄입니다.</p></div>
     <div class="dcell"><div class="dnum">차별 ③</div><h3>전국 온보딩(재가맹) 대행</h3>
       <p><b>재가맹·정산 전환의 번거로운 공사</b>를 당사가 전국 단위로 대행합니다.</p></div>
     <div class="dcell"><div class="dnum">차별 ④</div><h3>미납 회수·정산 데이터</h3>
@@ -678,23 +680,23 @@ b .red,.red{color:var(--red)}
 <!-- 7. 절감 브릿지 — 우대율 고정 + 처리원가 절감 -->
 <section class="slide">
   <div class="hd"><span class="sec">절감은 어디서 나오나</span><span class="pg"></span></div>
-  <p class="kicker">우대율은 규제 하한이라 그대로 — 우리는 그 위(처리원가·부가가치)에서 절감합니다</p>
-  <h2 class="headline">우대율은 그대로, <span class="red">처리원가에서</span> 낮춥니다</h2>
+  <p class="kicker">우대율은 규제 하한이라 그대로 — 레일에 내재된 VAN·매입 원가 레이어에서 조정합니다</p>
+  <h2 class="headline">우대율은 그대로, <span class="red">원가 레이어에서</span> 조정합니다</h2>
   <div class="bridge">
     <div class="brchart">
       <p class="brtitle">원이 부담하는 실효 총부담의 구성 <span class="ex">예시</span></p>
       <div class="brbars">
         <div class="brcol">
           <div class="brstack">
-            <div class="brseg cut top" style="height:100px">처리원가<br>·부가가치</div>
+            <div class="brseg cut top" style="height:100px">VAN·매입<br>원가 레이어</div>
             <div class="brseg keep" style="height:190px">우대 카드수수료<br>(규제 하한·고정)</div>
           </div>
           <div class="brlab">현행</div>
         </div>
         <div class="brcol">
           <div class="brstack">
-            <div class="brseg save" style="height:46px">▲ − [예시] bps 절감</div>
-            <div class="brseg cut" style="height:54px">처리원가<br>·부가가치</div>
+            <div class="brseg save" style="height:46px">▲ − [예시] bps 조정 여지</div>
+            <div class="brseg cut" style="height:54px">VAN·매입<br>원가 레이어</div>
             <div class="brseg keep" style="height:190px">우대 카드수수료<br>(그대로)</div>
           </div>
           <div class="brlab hot">더베스트페이 도입 후</div>
@@ -704,11 +706,11 @@ b .red,.red{color:var(--red)}
     <div class="brlegend">
       <div class="lgitem"><span class="lgsw keep"></span><div><h4>우대 카드수수료 — 건드리지 않음</h4>
         <p>온라인 하위가맹에 <b>자동 적용되는 규제 하한</b>입니다. 낮출 수 없고, 낮추겠다고 약속하지도 않습니다.</p></div></div>
-      <div class="lgitem hot"><span class="lgsw cut"></span><div><h4>처리원가·부가가치 — 여기서 절감</h4>
-        <p><b>VAN 건당 처리원가·매입/정산 조건</b>에서 <span class="ex">예시</span> bps를 낮춥니다. 실제 절감폭은 PoC로 확정.</p></div></div>
+      <div class="lgitem hot"><span class="lgsw cut"></span><div><h4>VAN·매입 원가 레이어 — 여기서 조정</h4>
+        <p>원이 추가로 내는 비용이 아니라, <b>레일 경제에 내재된 VAN·매입 원가 레이어</b>입니다. 사업자별로 달라 <b>조정 가능</b> — 더베스트페이 조정 여력으로 <span class="ex">예시</span> bps를 낮출 여지를 PoC로 확정.</p></div></div>
     </div>
   </div>
-  <div class="paybar">우대율(규제 하한)은 <b>그대로</b>. 절감은 <b>VAN 처리원가·부가가치</b>에서만 발생합니다.</div>
+  <div class="paybar">우대율(규제 하한)은 <b>그대로</b>. 조정은 <b>레일에 내재된 VAN·매입 원가 레이어</b>(사업자별로 다름)에서 발생합니다.</div>
   <p class="note">막대 높이·bps는 계산 구조를 보여주는 <b>예시</b>입니다. 실제 절감폭은 귀사 데이터로 PoC에서 확정합니다. 보육료(정부지원)는 국민행복카드·아이사랑 정부 레일로 절감 대상이 아니며, 대상은 부모부담 추가경비·자부담·학원 수강료 등으로 한정합니다.</p>
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
@@ -734,7 +736,7 @@ b .red,.red{color:var(--red)}
         <tr><td>전국 온보딩(재가맹) 대행</td>
           <td><span class="no">✕</span></td>
           <td><span class="par">△</span></td>
-          <td class="us"><span class="yes">✓</span><small><b>대행 캐파 <span class="ph">[확정 필요]</span></b></small></td></tr>
+          <td class="us"><span class="yes">✓</span><small><b>대행 캐파 <span class="ph">[발송 전 확정]</span></b></small></td></tr>
         <tr><td>미납 자동회수(dunning)</td>
           <td><span class="no">✕</span></td>
           <td><span class="par">△</span></td>
@@ -751,7 +753,7 @@ b .red,.red{color:var(--red)}
     </table>
   </div>
   <div class="paybar neu">차별점은 요율 숫자가 아니라 <b>실측 절감 근거 · 전국 온보딩 대행 · 운영가치(dunning·정산·데이터)</b>입니다.</div>
-  <p class="note">경쟁/대체재 열은 일반적 특성에 대한 예시 비교이며 특정 사업자를 단정하지 않습니다. ✓/△/✕·[확정 필요]는 자리표시이며, 실제 비교값은 확인 후 확정합니다.</p>
+  <p class="note">경쟁/대체재 열은 일반적 특성에 대한 예시 비교이며 특정 사업자를 단정하지 않습니다. ✓/△/✕·<b>[발송 전 확정]</b>은 대외발송 전 회사가 실값으로 확정할 내부초안 자리표시이며, 실제 비교값은 확인 후 확정합니다.</p>
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
 
@@ -951,17 +953,17 @@ b .red,.red{color:var(--red)}
   <div class="propwrap">
     <div class="pbox"><h3>(주)더베스트페이 <span class="tag">제안 주체</span></h3>
       <ul>
-        <li><span class="mk">·</span><span>결제 · VAN · PG 사업 <b>운영 역량</b></span></li>
-        <li><span class="mk">·</span><span>온보딩 대행 원 수 <span class="ph">[확정 필요]</span></span></li>
-        <li><span class="mk">·</span><span>누적 정산 규모 <span class="ph">[확정 필요]</span></span></li>
-        <li><span class="mk">·</span><span>레퍼런스 사례 <span class="ph">[확정 필요]</span></span></li>
+        <li><span class="mk">·</span><span>결제·VAN·PG 운영 역량 — <b>타사 논PG 대비 처리원가·정산 조정 여력</b></span></li>
+        <li><span class="mk">·</span><span>온보딩 대행 원 수 <span class="ph">[발송 전 확정]</span></span></li>
+        <li><span class="mk">·</span><span>누적 정산 규모 <span class="ph">[발송 전 확정]</span></span></li>
+        <li><span class="mk">·</span><span>레퍼런스 사례 <span class="ph">[발송 전 확정]</span></span></li>
       </ul>
     </div>
     <div class="pbox"><h3>협업 VAN 파트너 <span class="tag">인프라</span></h3>
       <ul>
-        <li><span class="mk">·</span><span><b>직승인 · 직매입</b> 인프라</span></li>
+        <li><span class="mk">·</span><span>카드 <b>승인·매입 처리·중계</b> 인프라</span></li>
         <li><span class="mk">·</span><span>카드사 <b>승인 · 정산 연동</b></span></li>
-        <li><span class="mk">·</span><span>파트너명 · 조건 <span class="ph">[확정 필요]</span></span></li>
+        <li><span class="mk">·</span><span>파트너명 · 조건 <span class="ph">[발송 전 확정]</span></span></li>
       </ul>
     </div>
     <div class="propimg">
@@ -983,7 +985,7 @@ b .red,.red{color:var(--red)}
   <div class="price">
     <div class="prcard"><div class="prk">기본 구조</div>
       <h3>도입비 · 수수료 조건</h3>
-      <p>도입비·수수료 조건은 규모·범위에 맞춰 <b>협의</b>합니다. <span class="ph">[협의 · 자리표시]</span></p></div>
+      <p>도입비·수수료 조건은 규모·범위에 맞춰 <b>협의</b>합니다. <span class="ph">[발송 전 확정 · 협의]</span></p></div>
     <div class="prcard hot"><div class="prk">옵션</div>
       <h3>레브쉐어(Rev-Share)</h3>
       <p>비카드 레일·부가서비스 기반의 <b>절감액 공유형</b> 구조를 옵션으로 제안합니다. <b>절감을 함께 나눕니다.</b></p></div>
@@ -1005,7 +1007,7 @@ b .red,.red{color:var(--red)}
       <div class="ns"><div class="nsn">2</div><h4>데이터 진단</h4><p>현행 대비 절감 여지<br>실측 기준 설계</p></div>
       <div class="ns"><div class="nsn">3</div><h4>파일럿 설계</h4><p>1개 원 PoC로<br>절감 실증</p></div>
     </div>
-    <p class="contact">문의 · 더베스트페이 담당 <span class="ph" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff">[담당자 · 연락처 확정 필요]</span></p>
+    <p class="contact">문의 · 더베스트페이 담당 <span class="ph" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff">[담당자 · 연락처 · 발송 전 확정]</span></p>
     <p class="endnote">본 제안의 모든 수치는 예시이며 귀사 실측 데이터로 PoC에서 확정합니다 · 규제·정산은 관련 법규 준수 하 함께 검증 · 이미지: Unsplash License · 연출 스톡</p>
   </div>
 </section>
