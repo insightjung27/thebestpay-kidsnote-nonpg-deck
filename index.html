@@ -371,6 +371,63 @@ b .red,.red{color:var(--red)}
 .tmcol .tmsub b{color:var(--ink)}.tmcol.hot .tmsub b{color:var(--red2)}
 .tmarrow{display:flex;align-items:center;justify-content:center;padding:0 30px;color:var(--red);font-size:46px;font-weight:900}
 
+/* ═══ PAYMENT-STRUCTURE DIAGNOSIS (진단 슬라이드 · 신뢰앵커) ═══ */
+.dxwrap{margin:22px auto 0;max-width:1160px;width:100%}
+.dxtable{border:1px solid var(--line);border-radius:14px;overflow:hidden;width:100%}
+.dxtable table{width:100%;border-collapse:collapse}
+.dxtable th,.dxtable td{padding:16px 20px;text-align:center;border-bottom:1px solid var(--line);
+  border-right:1px solid var(--line);vertical-align:middle;line-height:1.35}
+.dxtable th:last-child,.dxtable td:last-child{border-right:0}
+.dxtable tr:last-child td{border-bottom:0}
+.dxtable thead th{background:var(--head);font-weight:850;color:var(--ink);font-size:18.5px}
+.dxtable tbody td{font-size:19px}
+.dxtable tbody td:first-child{text-align:left;font-weight:800;color:var(--ink);font-size:20px;background:var(--soft);width:47%}
+.dxtable tbody td:first-child b{color:var(--red2)}
+.dxtable tbody td:first-child small{display:block;font-size:14px;color:var(--muted);font-weight:650;margin-top:4px}
+.dxtable .way{font-size:24px;font-weight:900;letter-spacing:-.02em}
+.dxtable .way.non{color:var(--red2)}
+.dxtable .way.wpg{color:var(--ink)}
+.dxtable .vend{font-size:19px;font-weight:850;color:var(--body)}
+.fnsup{font-size:.6em;font-weight:800;color:var(--red);vertical-align:super;margin-left:1px;letter-spacing:0}
+
+.evid{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin:18px auto 0;max-width:1160px;width:100%;align-items:stretch}
+.evcol{border:1px solid var(--line);border-radius:13px;padding:15px 22px 17px;background:#fff}
+.evcol.acc{background:var(--red-soft);border-color:var(--redline)}
+.etag{display:inline-block;font-size:14.5px;font-weight:850;color:#fff;background:#5a6069;border-radius:8px;padding:5px 13px;margin:0 0 3px}
+.etag.hot{background:var(--red)}
+.evcol ul{margin:0;padding:0;list-style:none}
+.evcol li{font-size:15.5px;line-height:1.46;color:var(--body);padding:7px 0;border-top:1px solid var(--line);display:flex;gap:9px}
+.evcol.acc li{border-top-color:var(--redline)}
+.evcol li:first-child{border-top:0;padding-top:5px}
+.evcol li .mk{color:var(--red);font-weight:900;flex:none}
+.evcol li b{color:var(--ink)}.evcol.acc li b{color:var(--red2)}
+
+.srcs{margin:13px auto 0;max-width:1160px;width:100%;border-top:1px solid var(--line);padding-top:10px;
+  display:flex;flex-wrap:wrap;gap:5px 26px;justify-content:center}
+.srcs .src{font-size:12.5px;color:var(--muted);font-weight:600;line-height:1.4}
+.srcs .src b{color:var(--body);font-weight:850}
+.srcs a{color:var(--red2);text-decoration:none;border-bottom:1px solid var(--redline);font-weight:700}
+
+/* ═══ TWO-TRACK value (원비 논PG 교체 vs 커머스 PG 정면절감) ═══ */
+.track{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:30px auto 0;max-width:1140px;width:100%}
+.tcard{border:1px solid var(--redline);border-radius:16px;padding:26px 30px 24px;background:var(--red-soft);
+  display:flex;flex-direction:column}
+.tcard.b{background:#fff;border-color:var(--line)}
+.tbadge{display:inline-block;align-self:flex-start;font-size:15px;font-weight:850;color:#fff;background:var(--red);
+  border-radius:8px;padding:6px 15px;margin-bottom:14px}
+.tbadge.b{background:var(--dark)}
+.tdomain{font-size:25px;font-weight:900;color:var(--red2);line-height:1.24}
+.tcard.b .tdomain{color:var(--ink)}
+.tcur{font-size:16.5px;font-weight:700;color:var(--muted);margin-top:9px}
+.tcur b{color:var(--ink)}
+.tbody{font-size:18.5px;line-height:1.55;color:var(--body);margin:15px 0 0}
+.tbody b{color:var(--ink)}.tbody b.red{color:var(--red2)}
+.tmech{margin-top:auto;font-size:17px;font-weight:850;color:var(--red2);background:#fff;border:1px solid var(--redline);
+  border-radius:10px;padding:12px 16px;text-align:center}
+.tcard.b .tmech{color:var(--ink);border-color:var(--line);background:var(--soft)}
+.tvol{margin-top:11px;font-size:15px;font-weight:750;color:var(--muted);text-align:center}
+.tvol b{color:var(--ink)}
+
 /* ═══ PRINT = A4 landscape, 1 slide / page (WYSIWYG) ═══ */
 @media print{
   @page{size:A4 landscape;margin:0}
@@ -407,7 +464,7 @@ b .red,.red{color:var(--red)}
     <h1>논PG, <span class="red">이미 쓰고 계셔도</span> —<br>바꾸면 수수료는 <span class="red">더 내려갑니다.</span></h1>
     <p class="cov-sub">학부모 결제 경험은 그대로. <b>결제 뒤단(레일)만</b> 바꿉니다.</p>
     <span class="cov-role">B2B 결제 원가 절감 제안 — 원 1곳 무부담 PoC 선(先)실증</span>
-    <p class="cov-meta">이미 논PG를 쓰고 계신 점을 압니다. <b>우대율은 그대로 두고, 처리원가·정산에서</b> 총부담을 한 번 더 낮춥니다.<br>
+    <p class="cov-meta">귀사 원비 결제는 이미 <b>올댓페이 기반 논PG</b>입니다. 현행을 부정하지 않고, <b>우대율은 그대로 두고 처리원가·정산에서</b> 총부담을 한 번 더 낮춥니다.<br>
       제안: (주)더베스트페이 + 협업 VAN 파트너 · 2026.09</p>
   </div>
 </section>
@@ -415,8 +472,8 @@ b .red,.red{color:var(--red)}
 <!-- 2. Executive Summary -->
 <section class="slide">
   <div class="hd"><span class="sec">한 장 요약</span><span class="pg"></span></div>
-  <p class="kicker">이미 논PG인 귀사에, 우리가 드리는 세 가지 약속</p>
-  <h2 class="headline">이미 논PG인 귀사를, <span class="red">한 번 더</span> 낮춥니다</h2>
+  <p class="kicker">귀사 원비는 이미 올댓페이 기반 논PG — 우리가 드리는 세 가지 약속</p>
+  <h2 class="headline">이미 논PG인 원비를, <span class="red">한 번 더</span> 낮춥니다</h2>
   <div class="promise">
     <div class="pcard hot"><div class="pn">1</div><h3>우대율은 그대로, 원가에서 절감</h3>
       <p>우대율(규제 하한)은 <b>건드리지 않습니다.</b> 대신 <b>VAN 처리원가·부가가치</b>에서 총부담을 낮춥니다.</p></div>
@@ -430,7 +487,85 @@ b .red,.red{color:var(--red)}
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
 
-<!-- 3. 왜 지금 결제 뒤단인가 -->
+<!-- 3. ★귀사 결제 구조 진단 (신뢰앵커) -->
+<section class="slide">
+  <div class="hd"><span class="sec">귀사 결제 구조 진단</span><span class="pg"></span></div>
+  <p class="kicker">공개된 공식 자료를 교차확인해, 서비스별 결제 방식부터 정리했습니다</p>
+  <h2 class="headline">추측이 아니라, <span class="red">정확히 알고</span> 제안합니다</h2>
+  <div class="dxwrap">
+    <div class="dxtable">
+      <table>
+        <thead><tr><th>결제 영역</th><th>현행 결제 방식</th><th>연동사</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>학부모에게 청구하는 <b>원비 결제</b><small>월 원비 · 부모부담 추가경비 등 반복·대량 결제</small></td>
+            <td><span class="way non">논PG</span></td>
+            <td><span class="vend">올댓페이</span></td>
+          </tr>
+          <tr>
+            <td>키즈노트 <b>스토어 · 스마트 주문 · 포토몰(개인)</b><small>커머스성 개별 결제</small></td>
+            <td><span class="way wpg">PG</span></td>
+            <td><span class="vend">토스페이먼츠</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="evid">
+    <div class="evcol acc">
+      <span class="etag hot">원비 = 논PG 판단 근거</span>
+      <ul>
+        <li><span class="mk">·</span><span>키즈노트가 원비결제 신청 안내에서 결제 문의처를 <b>올댓페이 고객센터</b>로 명시<sup class="fnsup">[1]</sup></span></li>
+        <li><span class="mk">·</span><span>올댓페이 연혁에 2022년 학원 특화 <b>Non-PG 청구서 결제</b>, 2023년 연동업체에 <b>키즈노트 추가</b> 기재<sup class="fnsup">[2]</sup></span></li>
+        <li><span class="mk">·</span><span>원 자체의 <b>카드사 가맹 수수료 적용</b>(가입·사용료 무료, 결제수수료 별도이며 기존 오프라인 카드수수료율과 동일, 미가맹 원엔 가맹서류 요구) = 직가맹 논PG 구조와 부합<sup class="fnsup">[3]</sup></span></li>
+      </ul>
+    </div>
+    <div class="evcol">
+      <span class="etag">스토어·커머스 = PG 판단 근거</span>
+      <ul>
+        <li><span class="mk">·</span><span>개인정보 처리방침 개정 공지에 <b>토스페이먼츠</b>가 결제대행·파트너사 판매대금 정산을 담당한다고 명시(같은 문서에서 키즈노트·클래스노트 결제는 올댓페이로 별도 구분)<sup class="fnsup">[4]</sup></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="srcs">
+    <span class="src"><b>[1]</b> 키즈노트 원비결제 신청 안내 · <a href="https://www.with-kidsnote.com/bill/apply" target="_blank" rel="noopener">with-kidsnote.com/bill/apply</a></span>
+    <span class="src"><b>[2]</b> 올댓페이 연혁 · <a href="https://www.allthatpay.kr/html/greeting.html" target="_blank" rel="noopener">allthatpay.kr/html/greeting.html</a></span>
+    <span class="src"><b>[3]</b> 키즈노트 원비결제 안내 · <a href="https://www.kidsnote.com/jp/campaign/bill" target="_blank" rel="noopener">kidsnote.com/jp/campaign/bill</a></span>
+    <span class="src"><b>[4]</b> 키즈노트 개인정보 처리방침 개정 공지 · <a href="https://www.with-kidsnote.com/231f59e6-78b7-8056-8a76-c5e8dbb306ea" target="_blank" rel="noopener">with-kidsnote.com</a></span>
+  </div>
+  <p class="note">가맹계약서·승인/정산 원장까지 확인한 것은 아니며, <b>공개된 공식 자료를 교차확인한 결과</b>입니다. 세부 구조·조건은 협의 및 실측으로 확정합니다.</p>
+  <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
+</section>
+
+<!-- 4. ★두 갈래 절감 전략 (2트랙 밸류) -->
+<section class="slide">
+  <div class="hd"><span class="sec">두 갈래 절감 전략</span><span class="pg"></span></div>
+  <p class="kicker">진단한 두 영역에, 각각 다른 방식으로 총부담을 낮춥니다</p>
+  <h2 class="headline">원비와 커머스, <span class="red">두 갈래로</span> 낮춥니다</h2>
+  <div class="track">
+    <div class="tcard">
+      <span class="tbadge">트랙 A · 핵심 볼륨</span>
+      <div class="tdomain">원비 결제 <span style="font-size:16px;font-weight:800;color:var(--red2)">(올댓페이 논PG)</span></div>
+      <div class="tcur">전략 · <b>논PG 레일 교체</b></div>
+      <p class="tbody">이미 논PG이므로 <b>우대율(규제 하한)은 건드리지 않습니다.</b> 더베스트페이 논PG로 레일만 교체해 <b class="red">VAN 처리원가·매입/정산 조건</b>에서 한 번 더 낮춥니다.</p>
+      <div class="tmech">절감 지점 · <b>처리원가·정산에서 절감</b></div>
+      <div class="tvol">반복·대량 결제 = <b>사업의 핵심 볼륨</b></div>
+    </div>
+    <div class="tcard b">
+      <span class="tbadge b">트랙 B · 추가 업사이드</span>
+      <div class="tdomain">스토어 · 스마트주문 · 포토몰(개인) <span style="font-size:16px;font-weight:800;color:var(--muted)">(토스 PG)</span></div>
+      <div class="tcur">전략 · <b>PG → 논PG 전환</b></div>
+      <p class="tbody">이 영역은 <b>PG를 경유</b>합니다. 즉 <b class="red">실제 PG 마진이 존재</b>합니다. 논PG로 전환하면 그 마진만큼 <b>정면 수수료 절감 여지</b>가 실재합니다.</p>
+      <div class="tmech b">절감 지점 · <b>PG 마진 자체를 절감</b></div>
+      <div class="tvol">원비 대비 <b>작은 볼륨 · 추가 업사이드</b></div>
+    </div>
+  </div>
+  <div class="paybar">핵심은 <b>원비(트랙 A)</b>입니다. 커머스(트랙 B)는 <b>덤으로 얹히는 추가 절감</b>으로 봐 주십시오 — 과대포장하지 않습니다.</div>
+  <p class="note">트랙 A는 우대율을 그대로 두고 처리원가에서, 트랙 B는 PG 마진에서 절감합니다. 실제 절감폭은 영역별로 귀사 데이터로 PoC에서 확정합니다. 결제 방식 근거·출처는 앞의 '결제 구조 진단' 장을 참고하십시오.</p>
+  <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
+</section>
+
+<!-- 5. 왜 지금 결제 뒤단인가 -->
 <section class="slide">
   <div class="hd"><span class="sec">왜 지금, 결제 뒤단인가</span><span class="pg"></span></div>
   <p class="kicker">같은 카드 결제라도, 실효 수수료는 '레일 구성'이 결정합니다</p>
@@ -479,13 +614,14 @@ b .red,.red{color:var(--red)}
 <!-- 5. ★논PG 구현 원리 (핵심 다이어그램) -->
 <section class="slide">
   <div class="hd"><span class="sec">논PG 구현 원리 · 자금 흐름 비교</span><span class="pg"></span></div>
-  <p class="kicker">귀사는 이미 오른쪽(논PG)입니다 — 우리는 그 안에서 원가를 한 번 더 낮춥니다</p>
+  <p class="kicker">원비는 이미 오른쪽(논PG), 커머스는 왼쪽(PG) — 두 영역 모두 낮출 여지가 있습니다</p>
   <h2 class="headline">이미 논PG인 그 안에서, <span class="red">원가를 한 번 더</span></h2>
   <div class="diag">
-    <!-- LEFT: 일반 PG (참고 · 귀사 아님) -->
+    <!-- LEFT: 일반 PG = 귀사 스토어/커머스 영역의 실제 구조 -->
     <div class="fpanel">
-      <p class="ftitle">일반 PG 자금 흐름 <span style="font-size:14px;font-weight:800;color:var(--muted)">· 참고(귀사 아님)</span></p>
-      <p class="fst">PG를 경유 — 카드 수수료 위에 PG 마진이 더해짐</p>
+      <span style="display:inline-block;font-size:14px;font-weight:850;color:#fff;background:#5a6069;border-radius:8px;padding:5px 14px;margin:0 0 8px">▶ 귀사 스토어·스마트주문·포토몰 (토스 PG)</span>
+      <p class="ftitle">일반 PG 자금 흐름 <span style="font-size:14px;font-weight:800;color:var(--muted)">· 커머스 영역의 실제 구조</span></p>
+      <p class="fst">PG를 경유 — 카드 수수료 위에 <b>PG 마진</b>이 더해짐(= 논PG 전환 시 정면 절감 여지)</p>
       <div class="fnode head"><div class="fn">학부모</div><div class="fd">앱에서 카드 결제</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="fnode"><div class="fn">결제 앱</div><div class="fd">PG 대표가맹점 경유</div></div>
@@ -495,11 +631,11 @@ b .red,.red{color:var(--red)}
       <div class="fnode"><div class="fn">카드사 승인 · 매입</div></div>
       <svg class="farrow" viewBox="0 0 20 26" fill="none"><path d="M10 0v20M3 14l7 8 7-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="fnode"><div class="fn">원(어린이집) 정산</div><div class="fd">PG 마진 차감 후 입금</div></div>
-      <div class="fbadge" style="background:var(--soft2);color:var(--muted);border:1px solid var(--line)">여기엔 원가에 <b>PG 마진</b>이 포함됩니다</div>
+      <div class="fbadge" style="background:var(--red-soft);color:var(--red2);border:1px dashed var(--red)">커머스엔 <b>PG 마진</b>이 존재 — 논PG 전환 시 정면 절감</div>
     </div>
-    <!-- RIGHT: 논PG · 귀사 현재 위치 -->
+    <!-- RIGHT: 논PG · 귀사 원비 현재 위치 -->
     <div class="fpanel acc">
-      <span style="display:inline-block;font-size:14px;font-weight:850;color:#fff;background:#177a4c;border-radius:8px;padding:5px 14px;margin:0 0 8px">✓ 귀사는 이미 여기(논PG)</span>
+      <span style="display:inline-block;font-size:14px;font-weight:850;color:#fff;background:#177a4c;border-radius:8px;padding:5px 14px;margin:0 0 8px">✓ 귀사 원비는 이미 여기(논PG·올댓페이)</span>
       <p class="ftitle">논PG 자금 흐름 · 우리가 낮추는 지점</p>
       <p class="fst">PG 미경유는 이미 하고 계십니다 — 우리는 그 안의 <b>처리원가·정산</b>만 최적화합니다</p>
       <div class="fnode head"><div class="fn">학부모</div><div class="fd">앱에서 카드 결제 · <b>경험 동일</b></div></div>
@@ -514,15 +650,15 @@ b .red,.red{color:var(--red)}
       <div class="fbadge keep">우대율은 <em>그대로</em>, <b style="color:#ff8080">처리원가·정산</b>에서 절감</div>
     </div>
   </div>
-  <div class="paybar tight">현행(논PG)을 부정하지 않습니다 — <b>우대율은 그대로, VAN 처리원가·매입/정산 조건에서만 낮춥니다.</b></div>
-  <p class="note">개념 다이어그램(원리 재현)입니다. 실제 노드·조건은 카드사·VAN 규정에 따르며, 절감폭은 귀사 데이터로 PoC에서 확정합니다.</p>
+  <div class="paybar tight">원비(논PG)는 <b>우대율 그대로, 처리원가·정산에서</b> · 커머스(PG)는 <b>PG 마진 자체에서</b> 낮춥니다.</div>
+  <p class="note">개념 다이어그램(원리 재현)입니다. 실제 노드·조건은 카드사·VAN 규정에 따르며, 절감폭은 귀사 데이터로 PoC에서 확정합니다. 영역별 결제 방식 근거·출처는 '결제 구조 진단' 장을 참고하십시오.</p>
   <div class="foot"><span class="fb">더<em>베스트</em>페이 논PG 결제 제안</span><span>키즈노트 귀중 · 2026.09</span></div>
 </section>
 
 <!-- 6. ★논PG도 다 같은 논PG가 아니다 -->
 <section class="slide">
   <div class="hd"><span class="sec">논PG도 다 같은 논PG가 아니다</span><span class="pg"></span></div>
-  <p class="kicker">이미 논PG·직가맹을 쓰고 계실 수 있습니다 — 그래도 더 낮출 수 있습니다</p>
+  <p class="kicker">원비는 이미 논PG·직가맹입니다(올댓페이) — 그래도 더 낮출 수 있습니다</p>
   <h2 class="headline">같은 논PG여도, <span class="red">더 낮출 수 있습니다</span></h2>
   <div class="diff">
     <div class="dcell"><div class="dnum">차별 ①</div><h3>더 낮은 VAN 건당 처리원가</h3>
@@ -888,7 +1024,7 @@ b .red,.red{color:var(--red)}
   const fit=document.getElementById('fit');
   const bar=document.getElementById('bar');
   let i=0;
-  // 페이지 번호 자동 주입 (표지 제외, n / 15)
+  // 페이지 번호 자동 주입 (표지 제외, n / total — 슬라이드 수 자동 반영)
   document.querySelectorAll('.pg').forEach(function(el){
     const s=el.closest('.slide'); const idx=slides.indexOf(s);
     el.textContent=String(idx+1).padStart(2,'0')+' / '+total;
